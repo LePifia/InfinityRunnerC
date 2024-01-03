@@ -6,6 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes: []
   m_configObjects:
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f7cfe87c13f604242a1a7c3597c2fa70,
+      type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: e8020b673ec5f0e41b75de178d4b229d,
+      type: 2}
     com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
       guid: 34120cf4f9310404ba97a5d44601b8cb, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: d46a797e834cfec4f9f6967132e25436,
@@ -14,3 +18,11 @@ EditorBuildSettings:
       guid: 02c9f3e50105f404d917046e4ffdb228, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: e3a2861fc3ec1524db5f3840e4cd1a26, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: fd43e7d04d385aa46a7e2c1d2d05668d,
+      type: 2}
+    com.unity.xr.magicleap.magic_leap_settings: {fileID: 11400000, guid: a727430e90af4724bb0021b00d8b1cd4,
+      type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 758c01b05401f9b4abb3ccdafd09dec1,
+      type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 386034df9292b4e489c5ba435a0d4c3a,
+      type: 2}
