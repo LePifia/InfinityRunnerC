@@ -59,7 +59,7 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""17238b3a-e7be-4366-9976-548eb5ad2746"",
-                    ""path"": ""<Touchscreen>/primaryTouch"",
+                    ""path"": ""<Touchscreen>/primaryTouch/press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -81,7 +81,7 @@ public partial class @InputMap: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""bec24211-70e3-48a0-bdb8-b114624e8395"",
-                    ""path"": ""<Touchscreen>/position"",
+                    ""path"": ""<Touchscreen>/primaryTouch/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

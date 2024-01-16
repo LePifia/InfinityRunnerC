@@ -3,31 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
+using DG.Tweening;
+using Unity.VisualScripting;
+using UnityEngine.SceneManagement;
 
 [DefaultExecutionOrder(-1)]
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController instance { get; private set; }
+
     public delegate void StartTouchEvent(Vector2 position, float time);
     public event StartTouchEvent OnStartTouch;
 
     public delegate void EndTouchEvent(Vector2 position, float time);
     public event EndTouchEvent OnEndTouch;
 
-    
-
     private InputMap inputmap;
-
-    private CharacterController controller;
-    private Vector3 direction;
-    [SerializeField] float forwardSpeed;
-
 
 
     private void Awake()
     {
-        controller = GetComponent<CharacterController>();
-        inputmap = new InputMap();
+            if (instance != null)
+            {
+                Destroy(gameObject);
+                return;
+            }
+            instance = this;        
         
+        inputmap = new InputMap(); 
     }
 
     private void OnEnable()
@@ -51,37 +54,33 @@ public class PlayerController : MonoBehaviour
         inputmap.Mobile.TouchPress.started += ctx => StartTouch(ctx);
         inputmap.Mobile.TouchPress.canceled += ctx => EndTouch(ctx);
 
-        
     }
 
     private void StartTouch(InputAction.CallbackContext context)
     {
-        Debug.Log("TouchStarted" + inputmap.Mobile.TouchPosition.ReadValue<Vector2>());
+        //Debug.Log("TouchStarted" + inputmap.Mobile.TouchPosition.ReadValue<Vector2>());
         if (OnStartTouch != null) OnStartTouch(inputmap.Mobile.TouchPosition.ReadValue<Vector2>(), (float)context.startTime);
     }
 
     private void EndTouch(InputAction.CallbackContext context)
     {
-        Debug.Log("TouchEnded");
+        //Debug.Log("TouchEnded");
         if (OnEndTouch != null) OnEndTouch(inputmap.Mobile.TouchPosition.ReadValue<Vector2>(), (float)context.time);
     }
 
     private void FingerDown(Finger finger)
     {
+        if (OnStartTouch != null) OnStartTouch(finger.screenPosition, Time.time);
+    }
 
+    public Vector2 PrimaryPosition()
+    {
+        return inputmap.Mobile.TouchPosition.ReadValue<Vector2>();
     }
 
 
     private void Update()
     {
-        direction.z = forwardSpeed;
-
+        //Debug.Log(UnityEngine.InputSystem.EnhancedTouch.Touch.activeTouches)
     }
-
-    private void FixedUpdate()
-    {
-        //controller.Move(direction * Time.fixedDeltaTime);
-    }
-
- 
 }

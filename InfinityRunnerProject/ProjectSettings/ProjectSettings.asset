@@ -137,7 +137,14 @@ PlayerSettings:
   vulkanEnableCommandBufferRecycling: 1
   loadStoreDebugModeEnabled: 0
   bundleVersion: 1.0.2
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 11400000, guid: a727430e90af4724bb0021b00d8b1cd4, type: 2}
+  - {fileID: 11400000, guid: 02c9f3e50105f404d917046e4ffdb228, type: 2}
+  - {fileID: 8460557605111429202, guid: d46a797e834cfec4f9f6967132e25436, type: 2}
+  - {fileID: 11400000, guid: fd43e7d04d385aa46a7e2c1d2d05668d, type: 2}
+  - {fileID: 11400000, guid: 34120cf4f9310404ba97a5d44601b8cb, type: 2}
+  - {fileID: 11400000, guid: 807db677d575b0c4ca60ad36d02ac938, type: 2}
+  - {fileID: -7970705105061540233, guid: 386034df9292b4e489c5ba435a0d4c3a, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -956,7 +963,13 @@ PlayerSettings:
   XboxOneOverrideIdentityPublisher: 
   vrEditorSettings: {}
   cloudServicesEnabled:
+    Build: 0
+    Game Performance: 0
+    Legacy Analytics: 0
+    Purchasing: 0
+    UDP: 0
     UNet: 1
+    Unity Ads: 0
   luminIcon:
     m_Name: 
     m_ModelFolderPath: 
@@ -976,11 +989,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: b6b043f2-d6e5-422f-a19b-c14303462675
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: InfinityRunnerProject
+  organizationId: davidguersi
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
